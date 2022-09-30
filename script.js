@@ -1,7 +1,9 @@
 const container = document.getElementById("container");
 const square = document.querySelector("div");
-const button = document.querySelector("button");
+const reset = document.querySelector("button");
 const userInput = document.getElementById("quantity");
+
+let color = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
 
 
 
@@ -35,7 +37,7 @@ let createGrid = (amountOfSquares = 256) => {
 /*Change to black on hover */
 
 square.addEventListener("mouseover", (e) => {
-    event.target.classList.add("fill");
+    e.target.style.backgroundColor = `${color}`
 });
 
 
@@ -47,6 +49,19 @@ createGrid();
 userInput.addEventListener("change", (e) => {
     updateGrid();
 });
+
+reset.addEventListener("click", (e) => {
+    container.innerHTML = "";
+    userInput.value = "";
+    container.style.gridTemplateColumns = "repeat(16, 2fr)"
+    container.style.gridTemplateRows = "repeat(16, 2fr)"
+    createGrid();
+});
+
+
+    
+    
+
 
 
 
