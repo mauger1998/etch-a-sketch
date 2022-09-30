@@ -15,4 +15,14 @@
 .fill {
     background-color:blue;
 }
-
+body {
+    background-color: pink;
+    -webkit-animation: random 5s infinite;
+    animation: random 5s infinite;
+}
+@keyframes  random {
+   15% { background-image: linear-gradient(to right, #000000, #532623, #975420, #bb9900, #a8eb12); } 
+   30% { background-image: linear-gradient(to right, #783636, #1bd4e9, #f96f05, #55d522, #a0474b); } 
+   45% { background-image: linear-gradient(to right, #f10808, #e4f806, #15d334, #bb00a5, #a8eb12); } 
+   60% { background-image: linear-gradient(to right, #2ac759, #e1e90f, #1fb9d0, #7322b9, #9773b0);}
+   75% { background-image: linear-gradient(to right, #000000, #532623, #975420, #bb9900, #a8eb12); } 
