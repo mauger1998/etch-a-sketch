@@ -19,6 +19,10 @@ body {
     background-color: pink;
     -webkit-animation: random 5s infinite;
     animation: random 5s infinite;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 @keyframes  random {
    15% { background-image: linear-gradient(to right, #000000, #532623, #975420, #bb9900, #a8eb12); } 
@@ -26,3 +30,4 @@ body {
    45% { background-image: linear-gradient(to right, #f10808, #e4f806, #15d334, #bb00a5, #a8eb12); } 
    60% { background-image: linear-gradient(to right, #2ac759, #e1e90f, #1fb9d0, #7322b9, #9773b0);}
    75% { background-image: linear-gradient(to right, #000000, #532623, #975420, #bb9900, #a8eb12); } 
+}
